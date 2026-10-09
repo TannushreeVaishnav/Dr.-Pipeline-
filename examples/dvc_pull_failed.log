@@ -1,0 +1,8 @@
+# SYNTHETIC DEMO: realistic format, not a production incident.
+2026-10-22T09:14:02.391Z workflow_run_id=884201 job=fetch-data
+2026-10-22T09:14:02.392Z $ dvc pull
+2026-10-22T09:14:03.108Z Collecting                                                                          0%              0/4 [00:00<?,     ?file/s]
+2026-10-22T09:14:03.514Z Fetching
+2026-10-22T09:14:04.220Z WARNING: Cache 'a91f2e...dir' not found. It might be missing from the remote.
+2026-10-22T09:14:04.221Z ERROR: failed to pull data from the cloud - 1 files could not be downloaded
+2026-10-22T09:14:04.222Z ##[error]Process completed with exit code 1.

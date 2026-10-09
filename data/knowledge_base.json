@@ -1,0 +1,26 @@
+[
+  {
+    "chunk_id": "dvc-pull-cloud-failed",
+    "tool": "DVC",
+    "title": "Failed to pull data from the cloud",
+    "symptom": "dvc pull reports 'ERROR: failed to pull data from the cloud' or a missing cache warning.",
+    "guidance": "DVC documents that a common cause is pushing Git changes without pushing the corresponding data to the DVC remote. From the source project, run dvc push, then retry dvc pull. Treat this as a likely cause, not a confirmed diagnosis.",
+    "source_url": "https://doc.dvc.org/user-guide/troubleshooting"
+  },
+  {
+    "chunk_id": "dvc-pull-remote-selection",
+    "tool": "DVC",
+    "title": "Check which remote dvc pull uses",
+    "symptom": "dvc pull cannot find tracked objects in the expected remote, or uses a different remote than intended.",
+    "guidance": "DVC selects a remote from the remote fields in dvc.yaml or .dvc files first, then the --remote argument, then core.remote. Check the selected name and use dvc remote list to inspect configured remotes.",
+    "source_url": "https://doc.dvc.org/command-reference/pull"
+  },
+  {
+    "chunk_id": "dvc-remote-configuration",
+    "tool": "DVC",
+    "title": "Configure and authenticate a DVC remote",
+    "symptom": "DVC cannot connect to or authenticate with its configured remote storage.",
+    "guidance": "DVC remotes are configured in the project configuration. Verify the remote URL and provider credentials. Keep sensitive remote settings in the local, Git-ignored config rather than committing credentials.",
+    "source_url": "https://doc.dvc.org/user-guide/data-management/remote-storage"
+  }
+]
